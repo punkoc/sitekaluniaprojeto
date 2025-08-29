@@ -1,0 +1,145 @@
+.writers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #622b2b;
+  padding: 30px 15px;
+  width: 100%;
+}
+
+.writers-title-box {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 20px 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  font-family: 'Nanum Pen Script', cursive !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* sombra no texto */
+}
+
+.writers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.writer-card {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.writer-card:hover {
+  transform: scale(1.03);
+}
+
+.writer-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.writer-name {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 220px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-bio {
+  font-size: 18px;
+  color: #000;
+  text-align: justify;
+  overflow-y: auto;
+  max-height: 60vh;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.close-button {
+  margin-top: 20px;
+  background-color: #622b2b;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    padding: 10px;
+    max-width: 95%;
+    max-height: 90%;
+    border-radius: 8px;
+  }
+
+  .modal-image {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .modal-bio {
+    font-size: 15px;
+    padding: 0 5px;
+    text-align: justify;
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+
+  .close-button {
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+}
+
+.titulo-pag {
+  font-family: 'Nanum Pen Script', cursive !important;
+  font-weight: 400 !important;
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* sombra no texto */
+}
+

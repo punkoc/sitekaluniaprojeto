@@ -1,0 +1,86 @@
+/* Header.css */
+.header {
+  position: relative;
+  background-image: url('fundofundo.png'); /* Imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px; /* Altura do cabeçalho */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de transparência */
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.header-content {
+  font-family: 'Nanum Pen Script', cursive !important;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5); /* Fundo com leve transparência */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 250px; /* Ajuste o tamanho do logo para que ele fique visível */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Caveat', cursive !important;
+  text-align: center;
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .header {
+    height: 250px; /* Diminui a altura para telas menores */
+  }
+
+  .logo {
+    width: 200px; /* Ajusta o tamanho do logo em telas menores */
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  .header {
+    height: 200px; /* Ajusta a altura para telas muito pequenas */
+  }
+
+  .logo {
+    width: 150px; /* Ajusta o tamanho do logo para telas ainda menores */
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
+

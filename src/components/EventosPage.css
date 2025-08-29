@@ -1,0 +1,32 @@
+.carousel-item-evento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.foto-evento {
+  max-height: 500px;
+  max-width: 90%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* Ajuste específico para fotos horizontais e verticais */
+.foto-evento.vertical {
+  max-height: 500px;
+  width: auto;
+}
+
+.foto-evento.horizontal {
+  max-width: 100%;
+  height: auto;
+}
+
+.eventos-container strong {
+  color: black;
+}
+
+.eventos-container{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* sombra no texto */
+}

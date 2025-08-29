@@ -1,0 +1,85 @@
+/* Menu.css */
+
+/* Menu Container */
+.menu {
+  margin-top: 20px;
+  display: flex; /* Torna o menu um flex container */
+  justify-content: center; /* Centraliza os itens do menu horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  width: 100%; /* Garante que o menu ocupe toda a largura do cabeçalho */
+  padding: 10px; /* Espaçamento interno */
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo transparente com uma leve tonalidade */
+  border-radius: 20px; /* Borda arredondada no menu */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar */
+  flex-wrap: wrap; /* Permite que os itens que não cabem se movam para a próxima linha */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho */
+}
+
+/* Lista de itens do menu */
+.menu ul {
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+  display: flex; /* Organiza os itens do menu em linha */
+  gap: 20px; /* Espaçamento entre os itens */
+  flex-wrap: wrap; /* Permite que os itens que não cabem se movam para a próxima linha */
+  justify-content: center; /* Centraliza os itens */
+  align-items: center; /* Alinha verticalmente */
+  width: 100%; /* Garante alinhamento correto */
+}
+
+/* Itens da lista */
+.menu li {
+  display: inline-block; /* Garante o alinhamento correto dos itens */
+}
+
+/* Estilo dos links do menu */
+.menu a {
+  font-family: 'Satisfy', cursive;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: block;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+}
+/* Efeito de hover nos itens do menu */
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Fundo transparente com efeito de hover */
+  color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .menu ul {
+    gap: 15px;
+    justify-content: center; /* <- manter centralizado no tablet */
+  }
+
+  .menu a {
+    font-size: 1em; /* Ajusta o tamanho da fonte */
+    padding: 8px 15px; /* Ajuste o padding para telas menores */
+    min-width: 120px; /* Define uma largura mínima para os itens do menu */
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  .menu ul {
+    gap: 10px;
+    justify-content: center; /* <- manter centralizado no celular */
+  }
+  .menu a {
+    font-size: 0.9em; /* Tamanho da fonte menor para celulares */
+    padding: 8px 12px; /* Ajuste o padding para telas pequenas */
+    min-width: 100px; /* Define uma largura mínima para os itens do menu */
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+

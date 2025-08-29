@@ -1,0 +1,391 @@
+.textos-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.textos-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3436;
+  font-size: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.textos-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #6c5ce7, #a29bfe);
+}
+
+.month-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+
+.month-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #6c5ce7;
+  background-color: transparent;
+  color: #6c5ce7;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(108, 92, 231, 0.1);
+  white-space: nowrap;
+}
+
+.month-button:hover {
+  background-color: #6c5ce7;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
+}
+
+.month-button.active {
+  background-color: #6c5ce7;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
+}
+
+.carousel-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2d3436;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.carousel-item {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background: rgba(108, 92, 231, 0.9);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.custom-arrow.prev {
+  left: 10px;
+}
+
+.custom-arrow.next {
+  right: 10px;
+}
+
+.custom-arrow:hover {
+  background: rgba(108, 92, 231, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.custom-arrow.disabled {
+  background: rgba(108, 92, 231, 0.5);
+  cursor: not-allowed;
+}
+
+.no-images {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 2px dashed #ddd;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+  .textos-container {
+    padding: 0.5rem;
+  }
+
+  .textos-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .month-selector {
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .month-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+
+  .carousel-container {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .carousel-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-item {
+    padding: 5px;
+    min-height: 150px;
+  }
+
+  .carousel-image {
+    max-height: 70vh;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .image-counter {
+    bottom: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+
+  .custom-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .custom-arrow.prev {
+    left: 5px;
+  }
+
+  .custom-arrow.next {
+    right: 5px;
+  }
+
+  /* Melhorar a área de toque para os botões em dispositivos móveis */
+  .month-button,
+  .custom-arrow {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Ajustar o espaçamento dos pontos de navegação */
+  .alice-carousel__dots {
+    margin: 5px 0;
+  }
+
+  .alice-carousel__dots-item {
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+  }
+
+  /* Otimizar para gestos de deslize */
+  .alice-carousel__wrapper {
+    touch-action: pan-y pinch-zoom;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 360px) {
+  .textos-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .month-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .carousel-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .image-counter {
+    padding: 3px 6px;
+    font-size: 0.6rem;
+  }
+}
+
+/* Ajustes para orientação paisagem em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+  .carousel-image {
+    max-height: 85vh;
+  }
+
+  .carousel-item {
+    min-height: 120px;
+  }
+
+  .month-selector {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Alice Carousel customization */
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  padding: 1rem;
+}
+
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-item {
+  color: #6c5ce7 !important;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.alice-carousel__dots {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.alice-carousel__dots-item:not(.__custom) {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  transition: all 0.3s ease;
+}
+
+.alice-carousel__dots-item:not(.__custom):hover, 
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: #6c5ce7;
+  transform: scale(1.2);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.loading-progress {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.loading-bar {
+  height: 100%;
+  background: linear-gradient(to right, #6c5ce7, #a29bfe);
+  transition: width 0.3s ease;
+}
+
+.loading-percentage {
+  color: #6c5ce7;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.error {
+  background-color: #fff3f3;
+  color: #d63031;
+  border: 1px solid #fab1a0;
+}
+
+.loading-errors {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  color: #d32f2f;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Adicionar fade nas bordas do carrossel */
+.alice-carousel__stage-item {
+  padding: 20px 0;
+}
+
+/* Melhorar a visualização das imagens */
+.alice-carousel__stage {
+  padding: 20px 0;
+  background: linear-gradient(to right, 
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0) 2%,
+    rgba(255,255,255,0) 98%,
+    rgba(255,255,255,1) 100%
+  );
+}
